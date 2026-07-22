@@ -42,7 +42,7 @@ const projects = [
     number: "01",
     title: "The Next Step",
     category: "KMC / Admission Campaign",
-    image: "/images/project-01.jpg",
+    image: "/images/project-01-generated.webp",
     href: "https://www.instagram.com/reel/DYma01JOIg8/",
     alt: "KMC Balkumari science entrance campaign reel cover",
   },
@@ -50,7 +50,7 @@ const projects = [
     number: "02",
     title: "Dreams Shouldn’t Wait",
     category: "KMC / Brand Content",
-    image: "/images/project-02.jpg",
+    image: "/images/project-02-generated.webp",
     href: "https://www.instagram.com/reel/DYy35kCuRYw/",
     alt: "KMC Balkumari admissions campaign reel cover",
   },
@@ -58,16 +58,15 @@ const projects = [
     number: "03",
     title: "An Ordinary Day",
     category: "Cinematic / Visual Storytelling",
-    image: "/images/project-03.jpg",
+    image: "/images/project-03-generated.webp",
     href: "https://www.instagram.com/reel/Da1osUlBBiV/",
     alt: "Cinematic memory reel cover",
-    rotated: true,
   },
   {
     number: "04",
     title: "Roots of the Season",
     category: "Asar 15 / Cultural Documentary",
-    image: "/images/project-04.jpg",
+    image: "/images/project-04-generated.webp",
     href: "https://www.instagram.com/reel/DasUnMxh84c/",
     alt: "Asar 15 Nepali farmer documentary reel cover",
   },
@@ -153,6 +152,8 @@ export default function Home() {
         gsap.to(".hero-portrait", {
           yPercent: 8,
           scale: 1.035,
+          filter: "blur(16px) drop-shadow(0 24px 28px rgba(24,20,14,.12))",
+          opacity: 0.62,
           ease: "none",
           scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true },
         });
@@ -350,7 +351,7 @@ export default function Home() {
             {projects.map((project) => (
               <a className="project-card" href={project.href} target="_blank" rel="noopener noreferrer" key={project.number}>
                 <div className="project-image">
-                  <Image className={project.rotated ? "rotate-cover" : ""} src={project.image} alt={project.alt} fill unoptimized sizes="(max-width: 768px) 94vw, 46vw" />
+                  <Image src={project.image} alt={project.alt} fill unoptimized sizes="(max-width: 768px) 94vw, 46vw" />
                   <span className="play">Play <Arrow diagonal /></span>
                 </div>
                 <div className="project-meta">
