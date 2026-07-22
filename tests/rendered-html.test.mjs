@@ -30,8 +30,8 @@ test("server-renders Aabishkar's complete portfolio shell", async () => {
   assert.match(html, /DYy35kCuRYw/);
   assert.match(html, /Da1osUlBBiV/);
   assert.match(html, /DasUnMxh84c/);
-  assert.match(html, /project-01-generated\.webp/);
-  assert.match(html, /project-04-generated\.webp/);
+  assert.match(html, /project-01-thumbnail\.webp/);
+  assert.match(html, /project-04-thumbnail\.webp/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
 });
 
@@ -47,6 +47,10 @@ test("ships the required verified visual assets", async () => {
     "../public/images/project-02-generated.webp",
     "../public/images/project-03-generated.webp",
     "../public/images/project-04-generated.webp",
+    "../public/images/project-01-thumbnail.webp",
+    "../public/images/project-02-thumbnail.webp",
+    "../public/images/project-03-thumbnail.webp",
+    "../public/images/project-04-thumbnail.webp",
     "../public/og.png",
     "../public/favicon.png",
   ];
